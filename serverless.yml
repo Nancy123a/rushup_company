@@ -1,0 +1,150 @@
+service:
+ name: rushupwebsite
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+package:
+  exclude:
+    - node_modules/**
+plugins:
+  - serverless-aws-documentation
+provider:
+  name: aws
+  runtime: python2.7
+  stage: ${opt:stage, self:custom.defaultStage}
+  profile: ${self:custom.profiles.${self:provider.stage}}
+  region: eu-west-1
+  memorySize: 512 # optional, in MB, default is 1024
+  timeout: 12 # optional, in seconds, default is 6
+  environment: ${file(env.yml):${self:provider.stage}}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource:
+        - "arn:aws:dynamodb:eu-west-1:261650959426:table/user_token"
+        - "arn:aws:dynamodb:eu-west-1:261650959426:table/delivery"
+        - "arn:aws:dynamodb:eu-west-1:261650959426:table/driver_token"
+        - "arn:aws:dynamodb:eu-west-1:261650959426:table/delivery_drivers"
+        - "arn:aws:dynamodb:eu-west-1:261650959426:table/driver_code"
+        - "arn:aws:dynamodb:eu-west-1:261650959426:table/delivery/index/identity_id-delivery_date-index"
+        - "arn:aws:dynamodb:eu-west-1:261650959426:table/delivery/index/driver_id-delivery_date-index"
+        - "arn:aws:dynamodb:eu-west-1:261650959426:table/driver_token/index/username-index"
+    - Effect: Allow
+      Action:
+        - sns:SetEndpointAttributes
+        - sns:GetEndpointAttributes
+        - sns:CreatePlatformEndpoint
+      Resource: "*"
+    - Effect: Allow
+      Action:
+        - sns:publish
+      Resource:
+        - "arn:aws:sns:eu-west-1:261650959426:app/GCM/rush_up"
+        - "arn:aws:sns:eu-west-1:261650959426:app/GCM/rush_up_driver"
+        - "arn:aws:sns:eu-west-1:261650959426:app/APNS_SANDBOX/rush_up_ios_dev"
+    - Effect: Allow
+      Action:
+        - cognito-idp:*
+      Resource: "*"
+    - Effect: Allow
+      Action:
+        - cognito-sync:ListRecords
+      Resource: "arn:aws:cognito-sync:*:*:identitypool/*/identity/*/dataset/*"
+    - Effect: Allow
+      Action:
+        - states:StartExecution
+      Resource:
+        - "arn:aws:states:eu-west-1:261650959426:stateMachine:delivery_timeout"
+        - "arn:aws:states:eu-west-1:261650959426:stateMachine:driver_assign"
+custom:
+  defaultStage: prod
+  profiles:
+    dev: zeroandonedev
+    prod: zeroandonedev
+  restApiRootResourceId:
+    dev: /dev
+    prod: /
+
+  documentation:
+    models:
+      -
+        name: Group
+        contentType: "application/json"
+        schema: ${file(models/group.json)}
+
+functions:
+  createGroup:
+    handler: group.create_group
+    events:
+      - http:
+          path: group
+          method: get
+          authorizer: aws_iam
+          documentation:
+            summary: "Create Company Group"
+
+  CheckIfCompany:
+    handler: group.check_if_company
+    events:
+      - http:
+          path: check
+          method: get
+          cors: true
+          authorizer: arn:aws:cognito-idp:eu-west-1:261650959426:userpool/eu-west-1_w2rC3VeKI
+          documentation:
+            summary: "Check if Company"
+
+  AssignUser:
+    handler: group.assign_user
+    events:
+      - http:
+          path: group/assign
+          method: post
+          cors: true
+          authorizer: arn:aws:cognito-idp:eu-west-1:261650959426:userpool/eu-west-1_w2rC3VeKI
+          documentation:
+            summary: "Assign User To Group"
+            requestModels:
+              "application/json": Group
+
+  DeleteUserFromGroup:
+    handler: group.delete_user
+    events:
+      - http:
+          path: group/delete
+          method: post
+          cors: true
+          authorizer: arn:aws:cognito-idp:eu-west-1:261650959426:userpool/eu-west-1_w2rC3VeKI
+          documentation:
+            summary: "Delete User From Group"
+            requestModels:
+              "application/json": Group
+
+
+  GetAllUsersCognito:
+    handler: group.get_all_users_in_group_cognito
+    events:
+      - http:
+          path: group/userscognito
+          method: get
+          cors: true
+          authorizer: arn:aws:cognito-idp:eu-west-1:261650959426:userpool/eu-west-1_w2rC3VeKI
+          documentation:
+            summary: " Get users for a group in website"
+
+  createDriverRegistrationCode:
+    handler: driver.save_registration_code
+    events:
+      - http:
+          path: driver/code/createcode
+          method: post
+          cors: true
+          authorizer: arn:aws:cognito-idp:eu-west-1:261650959426:userpool/eu-west-1_w2rC3VeKI
+          documentation:
+            summary: "create driver registration code"
+
