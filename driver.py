@@ -19,7 +19,6 @@ def save_registration_code(event,context):
     print json.dumps(response,  encoding='ascii')
     print (len(response))
     if len(response)== 2:
-     print('list is not empty')
      response = {
          "statusCode": 500,
          "headers" : { "Access-Control-Allow-Origin" : "*" },  # Required for CORS support to work
@@ -28,7 +27,6 @@ def save_registration_code(event,context):
 
      return  response
     else:
-     print ('list is empty')
      driver_code_table.put_item(
         Item={
             'username': drivername,

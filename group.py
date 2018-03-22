@@ -10,8 +10,6 @@ def create_group(event,context):
     user_name= event["userName"]
     type=event["request"]["userAttributes"]["custom:type"]
 
-    print(type)
-
     if type == "company":
      cognito.create_group(
      GroupName=user_name,
@@ -44,7 +42,6 @@ def assign_user(event,context):
     email=body['email']
     group_name=body['group_name']
 
-    print ("group name "+group_name)
     addUser = cognito.admin_add_user_to_group(
         UserPoolId='eu-west-1_w2rC3VeKI',
         Username=email,
@@ -65,7 +62,7 @@ def delete_user(event,context):
     email=body['email']
     group_name=body['group_name']
 
-    response = cognito.admin_remove_user_from_group(
+    cognito.admin_remove_user_from_group(
         UserPoolId='eu-west-1_w2rC3VeKI',
         Username=email,
         GroupName=group_name
@@ -97,7 +94,6 @@ def get_all_users_in_group_cognito(event,context):
             username=user['Username']
             phone=user['Attributes'][4]['Value']
             email=user['Attributes'][7]['Value']
-            print (username)
             _user=username+","+phone+","+email
             list_of_user.append(_user)
 
