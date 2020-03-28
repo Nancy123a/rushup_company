@@ -87,17 +87,15 @@ custom:
           type: object
           properties:
             username_phone_email: string
-   -
+
+    -
       name: UserAssign
       contentType: "application/json"
       schema:
         type: object
         properties:
-          email:
-          type: string
-          group_name:
-          type: string
-
+          email: string
+          groupname: string
 
   documentation:
     models:
@@ -156,9 +154,6 @@ functions:
           methodResponses:
             -
              statusCode: '200'
-             requestModels:
-               "application/json": UserAssign
-
 
   DeleteUserFromGroup:
     handler: group.delete_user
@@ -197,7 +192,7 @@ functions:
     handler: driver.save_registration_code
     events:
       - http:
-          path: driver/code/createcode
+          path: createcode
           method: post
           cors: true
           authorizer: arn:aws:cognito-idp:eu-west-1:261650959426:userpool/eu-west-1_w2rC3VeKI

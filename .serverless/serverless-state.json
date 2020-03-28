@@ -266,7 +266,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rushupwebsite/prod/1520339690894-2018-03-06T12:34:50.894Z/rushupwebsite.zip"
+                "S3Key": "serverless/rushupwebsite/prod/1524173145293-2018-04-19T21:25:45.293Z/rushupwebsite.zip"
               },
               "FunctionName": "rushupwebsite-prod-createGroup",
               "Handler": "group.create_group",
@@ -299,14 +299,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "CreateGroupLambdaVersionEKeD1jWf6gB0oiWOu5zB4cGJF6ODhs2MgUfp51w50o": {
+          "CreateGroupLambdaVersionjNEthIsh5fNoicWPZq59Q1uO1SurGyEkgIWcc5ugPM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateGroupLambdaFunction"
               },
-              "CodeSha256": "0Frq9hoDaXK9LcxdiNkgYGDNaj2rs+HD18n5HSmswBo="
+              "CodeSha256": "3GBS/vpqeB00c0cYkWLjPep7Sdil53RKymcp3nS2utg="
             }
           },
           "CheckIfCompanyLambdaFunction": {
@@ -316,7 +316,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rushupwebsite/prod/1520339690894-2018-03-06T12:34:50.894Z/rushupwebsite.zip"
+                "S3Key": "serverless/rushupwebsite/prod/1524173145293-2018-04-19T21:25:45.293Z/rushupwebsite.zip"
               },
               "FunctionName": "rushupwebsite-prod-CheckIfCompany",
               "Handler": "group.check_if_company",
@@ -349,14 +349,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "CheckIfCompanyLambdaVersion16KJSWoEwoTlij7uaQvpRVAPwx19RVHIhn2FKPokuA": {
+          "CheckIfCompanyLambdaVersiondFODSmj9fimoREIRQRWSdHVXntMT7ZSgjmlTF8rc": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CheckIfCompanyLambdaFunction"
               },
-              "CodeSha256": "0Frq9hoDaXK9LcxdiNkgYGDNaj2rs+HD18n5HSmswBo="
+              "CodeSha256": "3GBS/vpqeB00c0cYkWLjPep7Sdil53RKymcp3nS2utg="
             }
           },
           "AssignUserLambdaFunction": {
@@ -366,7 +366,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rushupwebsite/prod/1520339690894-2018-03-06T12:34:50.894Z/rushupwebsite.zip"
+                "S3Key": "serverless/rushupwebsite/prod/1524173145293-2018-04-19T21:25:45.293Z/rushupwebsite.zip"
               },
               "FunctionName": "rushupwebsite-prod-AssignUser",
               "Handler": "group.assign_user",
@@ -399,14 +399,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AssignUserLambdaVersionVSRVR6uVEGc5IuYw4ONLfbbSiJ2LLYquYfwlPb6gMg": {
+          "AssignUserLambdaVersionMj4kYihw9b5siidVX7K9hKgDsJFreB2vrCcpcxadg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AssignUserLambdaFunction"
               },
-              "CodeSha256": "0Frq9hoDaXK9LcxdiNkgYGDNaj2rs+HD18n5HSmswBo="
+              "CodeSha256": "3GBS/vpqeB00c0cYkWLjPep7Sdil53RKymcp3nS2utg="
             }
           },
           "DeleteUserFromGroupLambdaFunction": {
@@ -416,7 +416,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rushupwebsite/prod/1520339690894-2018-03-06T12:34:50.894Z/rushupwebsite.zip"
+                "S3Key": "serverless/rushupwebsite/prod/1524173145293-2018-04-19T21:25:45.293Z/rushupwebsite.zip"
               },
               "FunctionName": "rushupwebsite-prod-DeleteUserFromGroup",
               "Handler": "group.delete_user",
@@ -449,14 +449,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "DeleteUserFromGroupLambdaVersion0GM7KkqyiTgjQBPvr5UH8V0UMQerAJZcTBQeXOEdDW0": {
+          "DeleteUserFromGroupLambdaVersion2fji0OuKpPGkipKUKSGW01EdkQlobqtYebCigTf7Ig": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteUserFromGroupLambdaFunction"
               },
-              "CodeSha256": "0Frq9hoDaXK9LcxdiNkgYGDNaj2rs+HD18n5HSmswBo="
+              "CodeSha256": "3GBS/vpqeB00c0cYkWLjPep7Sdil53RKymcp3nS2utg="
             }
           },
           "GetAllUsersCognitoLambdaFunction": {
@@ -466,7 +466,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rushupwebsite/prod/1520339690894-2018-03-06T12:34:50.894Z/rushupwebsite.zip"
+                "S3Key": "serverless/rushupwebsite/prod/1524173145293-2018-04-19T21:25:45.293Z/rushupwebsite.zip"
               },
               "FunctionName": "rushupwebsite-prod-GetAllUsersCognito",
               "Handler": "group.get_all_users_in_group_cognito",
@@ -499,14 +499,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "GetAllUsersCognitoLambdaVersionFLd2bzcl24Dw6Zc9GcSCxOtZJgwYn4iSav03IdrtN4": {
+          "GetAllUsersCognitoLambdaVersioni2gquAZURGfYv5JUBMD7e8kgE4Q4D6OxZgFvtQYefk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllUsersCognitoLambdaFunction"
               },
-              "CodeSha256": "0Frq9hoDaXK9LcxdiNkgYGDNaj2rs+HD18n5HSmswBo="
+              "CodeSha256": "3GBS/vpqeB00c0cYkWLjPep7Sdil53RKymcp3nS2utg="
             }
           },
           "CreateDriverRegistrationCodeLambdaFunction": {
@@ -516,7 +516,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rushupwebsite/prod/1520339690894-2018-03-06T12:34:50.894Z/rushupwebsite.zip"
+                "S3Key": "serverless/rushupwebsite/prod/1524173145293-2018-04-19T21:25:45.293Z/rushupwebsite.zip"
               },
               "FunctionName": "rushupwebsite-prod-createDriverRegistrationCode",
               "Handler": "driver.save_registration_code",
@@ -549,14 +549,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "CreateDriverRegistrationCodeLambdaVersioncpaOlUqWjHQJT4T52YRyhWjR8OEer5UZKq9BKeBfE8": {
+          "CreateDriverRegistrationCodeLambdaVersionQ9vYD8OuH9y8qNYJNfqJeaCfm3Pv7v4m3wglJpF7co": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateDriverRegistrationCodeLambdaFunction"
               },
-              "CodeSha256": "0Frq9hoDaXK9LcxdiNkgYGDNaj2rs+HD18n5HSmswBo="
+              "CodeSha256": "3GBS/vpqeB00c0cYkWLjPep7Sdil53RKymcp3nS2utg="
             }
           },
           "ApiGatewayRestApi": {
@@ -636,7 +636,7 @@
               }
             }
           },
-          "ApiGatewayResourceDriver": {
+          "ApiGatewayResourceCreatecode": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
               "ParentId": {
@@ -644,30 +644,6 @@
                   "ApiGatewayRestApi",
                   "RootResourceId"
                 ]
-              },
-              "PathPart": "driver",
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
-            }
-          },
-          "ApiGatewayResourceDriverCode": {
-            "Type": "AWS::ApiGateway::Resource",
-            "Properties": {
-              "ParentId": {
-                "Ref": "ApiGatewayResourceDriver"
-              },
-              "PathPart": "code",
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
-            }
-          },
-          "ApiGatewayResourceDriverCodeCreatecode": {
-            "Type": "AWS::ApiGateway::Resource",
-            "Properties": {
-              "ParentId": {
-                "Ref": "ApiGatewayResourceDriverCode"
               },
               "PathPart": "createcode",
               "RestApiId": {
@@ -859,7 +835,7 @@
               }
             }
           },
-          "ApiGatewayMethodDriverCodeCreatecodeOptions": {
+          "ApiGatewayMethodCreatecodeOptions": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "AuthorizationType": "NONE",
@@ -898,7 +874,7 @@
                 ]
               },
               "ResourceId": {
-                "Ref": "ApiGatewayResourceDriverCodeCreatecode"
+                "Ref": "ApiGatewayResourceCreatecode"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -1116,13 +1092,13 @@
             },
             "DependsOn": "1Underscorew2rC3VeKIApiGatewayAuthorizer"
           },
-          "ApiGatewayMethodDriverCodeCreatecodePost": {
+          "ApiGatewayMethodCreatecodePost": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "POST",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceDriverCodeCreatecode"
+                "Ref": "ApiGatewayResourceCreatecode"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -1173,7 +1149,7 @@
               ]
             }
           },
-          "ApiGatewayDeployment1520339690940": {
+          "ApiGatewayDeployment1524173145322": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1187,7 +1163,7 @@
               "ApiGatewayMethodGroupAssignPost",
               "ApiGatewayMethodGroupDeletePost",
               "ApiGatewayMethodGroupUserscognitoGet",
-              "ApiGatewayMethodDriverCodeCreatecodePost"
+              "ApiGatewayMethodCreatecodePost"
             ]
           },
           "CreateGroupLambdaPermissionApiGateway": {
@@ -1398,37 +1374,37 @@
           "CreateGroupLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateGroupLambdaVersionEKeD1jWf6gB0oiWOu5zB4cGJF6ODhs2MgUfp51w50o"
+              "Ref": "CreateGroupLambdaVersionjNEthIsh5fNoicWPZq59Q1uO1SurGyEkgIWcc5ugPM"
             }
           },
           "CheckIfCompanyLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CheckIfCompanyLambdaVersion16KJSWoEwoTlij7uaQvpRVAPwx19RVHIhn2FKPokuA"
+              "Ref": "CheckIfCompanyLambdaVersiondFODSmj9fimoREIRQRWSdHVXntMT7ZSgjmlTF8rc"
             }
           },
           "AssignUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AssignUserLambdaVersionVSRVR6uVEGc5IuYw4ONLfbbSiJ2LLYquYfwlPb6gMg"
+              "Ref": "AssignUserLambdaVersionMj4kYihw9b5siidVX7K9hKgDsJFreB2vrCcpcxadg"
             }
           },
           "DeleteUserFromGroupLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteUserFromGroupLambdaVersion0GM7KkqyiTgjQBPvr5UH8V0UMQerAJZcTBQeXOEdDW0"
+              "Ref": "DeleteUserFromGroupLambdaVersion2fji0OuKpPGkipKUKSGW01EdkQlobqtYebCigTf7Ig"
             }
           },
           "GetAllUsersCognitoLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllUsersCognitoLambdaVersionFLd2bzcl24Dw6Zc9GcSCxOtZJgwYn4iSav03IdrtN4"
+              "Ref": "GetAllUsersCognitoLambdaVersioni2gquAZURGfYv5JUBMD7e8kgE4Q4D6OxZgFvtQYefk"
             }
           },
           "CreateDriverRegistrationCodeLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateDriverRegistrationCodeLambdaVersioncpaOlUqWjHQJT4T52YRyhWjR8OEer5UZKq9BKeBfE8"
+              "Ref": "CreateDriverRegistrationCodeLambdaVersionQ9vYD8OuH9y8qNYJNfqJeaCfm3Pv7v4m3wglJpF7co"
             }
           },
           "ServiceEndpoint": {
@@ -1476,6 +1452,43 @@
         "dev": "/dev",
         "prod": "/"
       },
+      "models": [
+        {
+          "name": "Type",
+          "contentType": "application/json",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "message": null,
+              "type": "string"
+            }
+          }
+        },
+        {
+          "name": "Users",
+          "contentType": "application/json",
+          "schema": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "username_phone_email": "string"
+              }
+            }
+          }
+        },
+        {
+          "name": "UserAssign",
+          "contentType": "application/json",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "email": "string",
+              "groupname": "string"
+            }
+          }
+        }
+      ],
       "documentation": {
         "models": [
           {
@@ -1514,8 +1527,14 @@
                 "identitySource": "method.request.header.Authorization"
               },
               "documentation": {
-                "summary": "Create Company Group"
+                "summary": "Create Company Group",
+                "description": "create group for company"
               },
+              "methodResponses": [
+                {
+                  "statusCode": "200"
+                }
+              ],
               "integration": "AWS_PROXY"
             }
           }
@@ -1556,8 +1575,17 @@
                 "identitySource": "method.request.header.Authorization"
               },
               "documentation": {
-                "summary": "Check if Company"
+                "summary": "Check if Company",
+                "description": "check if company"
               },
+              "methodResponses": [
+                {
+                  "statusCode": "200",
+                  "responseModels": {
+                    "application/json": "Type"
+                  }
+                }
+              ],
               "integration": "AWS_PROXY"
             }
           }
@@ -1599,10 +1627,16 @@
               },
               "documentation": {
                 "summary": "Assign User To Group",
+                "description": "assign user to group",
                 "requestModels": {
                   "application/json": "Group"
                 }
               },
+              "methodResponses": [
+                {
+                  "statusCode": "200"
+                }
+              ],
               "integration": "AWS_PROXY"
             }
           }
@@ -1644,10 +1678,16 @@
               },
               "documentation": {
                 "summary": "Delete User From Group",
+                "description": "delete user from group",
                 "requestModels": {
                   "application/json": "Group"
                 }
               },
+              "methodResponses": [
+                {
+                  "statusCode": "200"
+                }
+              ],
               "integration": "AWS_PROXY"
             }
           }
@@ -1688,8 +1728,15 @@
                 "identitySource": "method.request.header.Authorization"
               },
               "documentation": {
-                "summary": " Get users for a group in website"
+                "summary": " Get users for a group in website",
+                "description": "get users for a group in website"
               },
+              "methodResponses": [
+                {
+                  "statusCode": "200",
+                  "responseModel": "Users"
+                }
+              ],
               "integration": "AWS_PROXY"
             }
           }
@@ -1703,7 +1750,7 @@
         "events": [
           {
             "http": {
-              "path": "driver/code/createcode",
+              "path": "createcode",
               "method": "post",
               "cors": {
                 "origins": [
@@ -1730,7 +1777,8 @@
                 "identitySource": "method.request.header.Authorization"
               },
               "documentation": {
-                "summary": "create driver registration code"
+                "summary": "create driver registration code",
+                "description": "create driver registration code"
               },
               "integration": "AWS_PROXY"
             }
@@ -1744,7 +1792,7 @@
     "artifact": "C:\\Users\\nancy\\IdeaProjects\\rushup_company\\.serverless\\rushupwebsite.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/rushupwebsite/prod/1520339690894-2018-03-06T12:34:50.894Z",
+    "artifactDirectoryName": "serverless/rushupwebsite/prod/1524173145293-2018-04-19T21:25:45.293Z",
     "artifact": "rushupwebsite.zip"
   }
 }

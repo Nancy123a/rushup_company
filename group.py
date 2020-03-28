@@ -42,7 +42,7 @@ def assign_user(event,context):
     email=body['email']
     group_name=body['group_name']
 
-    addUser = cognito.admin_add_user_to_group(
+    cognito.admin_add_user_to_group(
         UserPoolId='eu-west-1_w2rC3VeKI',
         Username=email,
         GroupName=group_name
